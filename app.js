@@ -13,8 +13,15 @@ app.get('/profil', (req,res)=>{
     res.render("profil")
 })
 
-app.get('/profesi', (req,res)=>{
-    res.send("<h2>Profesi saya programmer</h2>")
+app.get('/pengalaman', (req,res)=>{
+    res.render('daftar-pengalaman', {
+        nama: 'Fariz Alfauzhi',
+        jenis_kelamin: 'L',
+        posisi: 'Sr. Programmer',
+        perusahaan: 'Courser-net',
+        gaji: 9000000,
+        pajak: (this.gaji > 10000000) ? 'gaji Anda kena pajak': 'aman, gak perlu bayar pajak',
+    })
 })
 
 app.listen(port, ()=>{

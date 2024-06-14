@@ -1,0 +1,19 @@
+<h1>Pengalaman Kandidat</h1>
+
+<ul>
+    <li><%= nama %></li>
+    <% if (jenis_kelamin == 'L') { %>
+        <li>Laki-Laki</li>
+    <% } else { %>
+        <li>Perempuan</li>
+    <% } %>
+    <li><%= posisi %></li>
+    <li><%= perusahaan %></li>
+    <li><%= gaji.toLocaleString('id-ID') %></li>
+
+    <% if (gaji > 10000000) { %>
+        <li>gaji Anda kena pajak</li>
+        <% } else { %>
+            <li>aman, ga perlu bayar pajak</li>
+            <% } %>
+</ul>
