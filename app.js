@@ -2,12 +2,15 @@ const express   = require('express')
 const app       = express()
 const port      = 3000
 
+app.set('view engine', 'ejs')
+app.set('views', './view-ejs')
+
 app.get('/', (req,res)=>{
-    res.send("<h2>Hello World</h2>")
+    res.render("index")
 })
 
 app.get('/profil', (req,res)=>{
-    res.send("<h2>Profil saya</h2>")
+    res.render("profil")
 })
 
 app.get('/profesi', (req,res)=>{
